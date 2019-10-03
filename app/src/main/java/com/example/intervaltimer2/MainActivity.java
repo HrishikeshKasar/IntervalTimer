@@ -3,7 +3,6 @@ package com.example.intervaltimer2;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     public static RecyclerView recyclerView;
     private Toolbar toolbar;
     public static ProfileAdapter mainActivityAdapter;
-    public static ProfileDBHelper dbHelperMain;
     public static Context mainActivitycontext;
     private long backPressedTime;
     private Toast backToast;
@@ -74,12 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //hrishi -> getAllData
         recyclerView = findViewById(R.id.recView_profiles_main_activity);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        dbHelperMain = new ProfileDBHelper(this);
-//        mainActivityAdapter = new ProfileAdapter(this);//,dbHelperMain.getAllData());
-//        recyclerView.setAdapter(mainActivityAdapter);
         mainActivitycontext = this;
         Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, mainActivitycontext);
         bgetall.execute("getAllData");
@@ -91,10 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                //hrishi -> getAllData
                 Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, mainActivitycontext);
                 bgetall.execute("getAllData");
-//                mainActivityAdapter.swapCursor(dbHelperMain.getAllData());
 
                 if (direction == ItemTouchHelper.RIGHT) {
                     Background_Sqlite_Read_Task backgroundSqliteReadTask = new Background_Sqlite_Read_Task(viewHolder.itemView.getTag().toString(),mainActivitycontext);
@@ -189,9 +181,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        //hrishi -> getAllData
-//        mainActivityAdapter = new ProfileAdapter(this, dbHelperMain.getAllData());
-//        recyclerView.setAdapter(mainActivityAdapter);
         Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, getBaseContext());
         bgetall.execute("getAllData");
     }
@@ -247,8 +236,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void updateRecyclerView() {
-        //hrishi -> getAllData
-//        mainActivityAdapter.swapCursor(dbHelperMain.getAllData());
         Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, mainActivitycontext);
         bgetall.execute("getAllData");
     }

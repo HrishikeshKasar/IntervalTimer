@@ -75,25 +75,25 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileV
             @Override
             public boolean onLongClick(View v) {
 
-//                AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-//                builder.setMessage("Do you want to Delete Profile?")
-//                        .setCancelable(false)
-//                        .setPositiveButton("yes", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.mainActivitycontext);
+                builder.setMessage("Do you want to Delete Profile?")
+                        .setCancelable(false)
+                        .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
                                 Background_Sqlite_Read_Task backgroundSqliteReadTask = new Background_Sqlite_Read_Task(profileViewHolder.itemView.getTag().toString(),mContext);
                                 backgroundSqliteReadTask.execute("deleteData");
                                 MainActivity.updateRecyclerView();
-//                            }
-//                        })
-//                        .setNegativeButton("no", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                dialog.cancel();
-//                            }
-//                        });
-//                AlertDialog alertDialog = builder.create();
-//                alertDialog.show();
+                            }
+                        })
+                        .setNegativeButton("no", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
 
                 return false;
             }
