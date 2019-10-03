@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RL_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor"
+    tools:context=".IntervalTmerCustom">
+
+    <Button
+        android:id="@+id/btn_ITCustom_Save"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:layout_below="@id/LL_IntervalTimer3"
+        android:layout_marginTop="21dp"
+        android:background="?attr/buttoncolor"
+        android:backgroundTint="?attr/buttoncolor"
+        android:text="@string/Save"
+        android:textColor="?attr/textcolor"
+        android:textColorHint="?attr/textcolor"
+        android:textSize="24sp"
+        android:elevation="2dp"/>
+
+    <EditText
+        android:id="@+id/editText_profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Profile Name"
+        android:inputType="textPersonName"
+        android:imeOptions="actionDone"
+        android:textColor="?attr/textcolor"
+        android:textColorHint="?attr/textcolor"
+        android:elevation="2dp"/>
+
+    <LinearLayout
+        android:id="@+id/LL_IntervalTimer1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_sets"
+        android:background="#00000000">
+
+        <Button
+            android:id="@+id/btn_sets_minus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="?attr/backgroundcolor"
+            android:gravity="right|center_vertical"
+            android:text="-"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText_sets"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00997575"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="1"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@+id/editText_warmup_mins"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_sets_plus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/LL_IntervalTimer1"
+            android:layout_weight="1"
+            android:background="#00DDDCDC"
+            android:gravity="left|center_vertical"
+            android:text="+"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_IntervalTimer2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_warmup">
+
+        <Button
+            android:id="@+id/btn_warmup_minus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00DDDCDC"
+            android:gravity="right|center_vertical"
+            android:text="-"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText_warmup_mins"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#008D6464"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="00"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@+id/editText_warmup_secs"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textViewcolon2"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00976767"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="numberDecimal"
+            android:text=":"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText_warmup_secs"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#006F4B4B"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="00"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@+id/editText_lowtensity_mins"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_warmup_plus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00DDDCDC"
+            android:gravity="left|center_vertical"
+            android:text="+"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_IntervalTimer3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView_HighIntensity"
+        android:layout_marginTop="-1dp">
+
+        <Button
+            android:id="@+id/btn_highintensity_minus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00DDDCDC"
+            android:gravity="right|center_vertical"
+            android:text="-"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText_highintensity_mins"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#005F3939"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="00"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@+id/editText_highintensity_secs"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textViewColon3"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#006D3D3D"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="numberDecimal"
+            android:text=":"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText_highintensity_secs"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00693D3D"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="00"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@+id/btn_ITCustom_Save"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_highintensity_plus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00DDDCDC"
+            android:gravity="left|center_vertical"
+            android:text="+"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_IntervalTimer4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_LowIntensity">
+
+        <Button
+            android:id="@+id/btn_lowintensity_minus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00DDDCDC"
+            android:gravity="right|center_vertical"
+            android:text="-"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText_lowtensity_mins"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00854C4C"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="00"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@+id/editText_lowtensity_secs"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textViewColon4"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00AF7777"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="numberDecimal"
+            android:text=":"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText_lowtensity_secs"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00835454"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="00"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@+id/editText_highintensity_mins"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_lowintensity_plus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00DDDCDC"
+            android:gravity="left|center_vertical"
+            android:text="+"
+            android:textColor="?attr/textcolor"
+            android:textColorHint="?attr/textcolor"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_sets"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@id/editText_profile_name"
+        android:gravity="bottom|center"
+        android:text="sets"
+        android:textColor="?attr/textcolor"
+        android:textColorHint="?attr/textcolor"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView_warmup"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@id/LL_IntervalTimer1"
+        android:layout_marginTop="3dp"
+        android:gravity="bottom|center"
+        android:text="warm up"
+        android:textColor="?attr/textcolor"
+        android:textColorHint="?attr/textcolor"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView_HighIntensity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LL_IntervalTimer4"
+        android:gravity="bottom|center"
+        android:text="high intensity"
+        android:textColor="?attr/textcolor"
+        android:textColorHint="?attr/textcolor"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView_LowIntensity"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/LL_IntervalTimer2"
+        android:gravity="bottom|center"
+        android:text="low intensity"
+        android:textColor="?attr/textcolor"
+        android:textColorHint="?attr/textcolor"
+        android:textSize="24sp" />
+
+</RelativeLayout>

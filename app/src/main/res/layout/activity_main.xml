@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/foregroundcolor"
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <TextView
+        android:id="@+id/textView_Title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/toolbar_main"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/foregroundcolor"
+        android:gravity="center"
+        android:text="@string/MenuTitle"
+        android:textColor="?attr/textcolor"
+        android:textSize="25sp"
+        android:elevation="2dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recView_profiles_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="432dp"
+        android:layout_above="@id/LL_Main_Buttons"
+        android:layout_below="@id/textView_Title"
+        android:background="#00000000"
+        app:reverseLayout="true"
+        app:stackFromEnd="true">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/LL_Main_Buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_IntervalTimerCustom"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="?attr/buttoncolor"
+            android:text="@string/Add"
+            android:textColor="?attr/textcolor"
+            android:textSize="24sp"
+            android:elevation="2dp"/>
+
+        <Button
+            android:id="@+id/btn_IntervalTimerQuick"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="?attr/buttoncolor"
+            android:text="@string/Quick"
+            android:textColor="?attr/textcolor"
+            android:textSize="24sp"
+            android:elevation="2dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

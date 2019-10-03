@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Interval Timer 2</string>
+    <string name="WarmUp">Warm up</string>
+    <string name="LowIntensity">Low Intensity</string>
+    <string name="HighIntensity">High Intensity</string>
+    <string name="zero">00:00</string>
+    <string name="Start">Start</string>
+    <string name="Save">Save</string>
+    <string name="Reset">Reset</string>
+    <string name="Pause">Pause</string>
+    <string name="Sets">Sets : 10</string>
+    <string name="IntervalTimerFixed">Timer 33S-2M</string>
+    <string name="CutomTimer">Custom Timer</string>
+    <string name="MenuTitle">Timer Profiles</string>
+    <string name="Add">Add</string>
+    <string name="Quick">Quick</string>
+    <string name="SummaryTitle">Workout Summary</string>
+
+</resources>

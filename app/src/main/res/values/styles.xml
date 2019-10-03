@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme.
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style> -->
+
+    <!-- Light/Day application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#1976D2</item>
+        <item name="colorAccent">#FFFF5722</item>
+        <item name="backgroundcolor">#ffffff</item>
+        <item name="foregroundcolor">#F1F0F0</item>
+        <item name="textcolor">#000000</item>
+        <item name="tintcolor">#000000</item>
+        <item name="buttoncolor">#2196F3</item>
+        <!--<item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item> -->
+    </style>
+
+    <!-- Dark/Night application theme. -->
+    <style name="dark" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#212121</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#FFFF5722</item>
+        <item name="backgroundcolor">#000000</item>
+        <item name="foregroundcolor">#141111</item>
+        <item name="textcolor">#ffffff</item>
+        <item name="tintcolor">#ffffff</item>
+        <item name="buttoncolor">#2196F3</item>
+        <!-- <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item> -->
+    </style>
+
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+
+    <style name="MyDialogThemeLight" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:textColor">#000000</item>
+        <item name="colorAccent">#000000</item>
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+
+    <style name="MyDialogThemeDark" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#141111</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="colorAccent">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+    </style>
+</resources>

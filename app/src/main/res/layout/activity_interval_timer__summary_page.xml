@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor"
+    android:orientation="vertical"
+    tools:context=".IntervalTimer_SummaryPage">
+
+    <TextView
+        android:id="@+id/textView_summaryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="50dp"
+        android:background="?attr/foregroundcolor"
+        android:gravity="center"
+        android:text="@string/SummaryTitle"
+        android:textColor="?attr/textcolor"
+        android:textSize="30sp"
+        android:elevation="2dp"/>
+
+    <TextView
+        android:id="@+id/textView_warmup_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_summaryTitle"
+        android:background="?attr/foregroundcolor"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="@string/WarmUp"
+        android:textColor="?attr/textcolor"
+        android:textSize="24sp"
+        android:elevation="2dp"/>
+
+    <TextView
+        android:id="@+id/textView_warmup_sessions"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_warmup_title"
+        android:gravity="center"
+        android:text="Num of Sessions - "
+        android:textColor="?attr/textcolor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_warmup_time"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/textView_warmup_sessions"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Time - "
+        android:textColor="?attr/textcolor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_lowIntensity_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_warmup_time"
+        android:background="?attr/foregroundcolor"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="@string/LowIntensity"
+        android:textColor="?attr/textcolor"
+        android:textSize="24sp"
+        android:elevation="2dp"/>
+
+    <TextView
+        android:id="@+id/textView_lowIntensity_sessions"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_below="@id/textView_lowIntensity_title"
+        android:gravity="center"
+        android:text="Num of Sessions - "
+        android:textColor="?attr/textcolor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_lowIntensity_time"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_below="@id/textView_lowIntensity_sessions"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Time - "
+        android:textColor="?attr/textcolor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_highIntensity_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_lowIntensity_time"
+        android:background="?attr/foregroundcolor"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="@string/HighIntensity"
+        android:textColor="?attr/textcolor"
+        android:textSize="24sp"
+        android:elevation="2dp"/>
+
+    <TextView
+        android:id="@+id/textView_highIntensity_sessions"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_below="@id/textView_highIntensity_title"
+        android:gravity="center"
+        android:text="Num of Sessions - "
+        android:textColor="?attr/textcolor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_highIntensity_time"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/textView_highIntensity_sessions"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Time - "
+        android:textColor="?attr/textcolor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_distance_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView_highIntensity_time"
+        android:background="?attr/foregroundcolor"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Distance"
+        android:textColor="?attr/textcolor"
+        android:textSize="24sp"
+        android:elevation="2dp"/>
+
+    <TextView
+        android:id="@+id/textView_Distance"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/textView_distance_title"
+        android:gravity="center"
+        android:textColor="?attr/textcolor"
+        android:textSize="18sp" />
+
+</RelativeLayout>

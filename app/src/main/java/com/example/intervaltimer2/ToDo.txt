@@ -1,0 +1,9 @@
+Issues :
+
+1) Results store
+    Add a completed workout to github and show it in history.
+
+2) Create a System wide Theme Option.
+
+3) Make app theme proper, make it uniform and modular.
+

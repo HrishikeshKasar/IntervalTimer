@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RL_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Warmup_orange"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TxtView_ExStageName"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/WarmUp"
+        android:textColor="#020000"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/TxtView_setNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtView_ExStageName"
+        android:gravity="center_horizontal|top"
+        android:text="@string/Sets"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        android:layout_below="@id/TxtView_setNum"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="#020000"
+        android:textSize="140sp" />
+
+    <Button
+        android:id="@+id/button_start_pause"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_above="@id/button_reset"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#00FFEB3B"
+        android:text="@string/Start"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#00FFEB3B"
+        android:text="@string/Reset"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+</RelativeLayout>
