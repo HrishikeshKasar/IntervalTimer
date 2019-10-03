@@ -103,7 +103,7 @@ public class Background_Sqlite_Read_Task extends AsyncTask<String,Void,ProfileAd
     protected void onPostExecute(ProfileAdapter adapter) {
         switch(method) {
             case "getAllData" :
-                recyclerView.setAdapter(adapter);
+                recyclerView.setAdapter(backgroundProfileAdapter);
                 break;
             case "getSpecificData" :
                 openIntervalTimerProfile();
@@ -162,6 +162,7 @@ public class Background_Sqlite_Read_Task extends AsyncTask<String,Void,ProfileAd
 
     public void openIntervalTimerProfile() {
         Intent intent = new Intent(context, IntervalTimer1.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra("warmUpTimeInMillis",warmUpMillis);
         intent.putExtra("lowIntensityTimeInMillis", lowIntensityMillis);
         intent.putExtra("highIntensityInMillis", highIntensityMillis);

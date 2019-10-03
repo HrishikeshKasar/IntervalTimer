@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
     private Boolean themeState;
     private Button btn_InterTimerCustom;
     private Button btn_IntervalTimerQuick;
-    private RecyclerView recyclerView;
+    public static RecyclerView recyclerView;
     private Toolbar toolbar;
     public static ProfileAdapter mainActivityAdapter;
     public static ProfileDBHelper dbHelperMain;
-
+    public static Context mainActivitycontext;
     private long backPressedTime;
     private Toast backToast;
 
@@ -77,12 +77,12 @@ public class MainActivity extends AppCompatActivity {
         //hrishi -> getAllData
         recyclerView = findViewById(R.id.recView_profiles_main_activity);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        dbHelperMain = new ProfileDBHelper(this);
-        mainActivityAdapter = new ProfileAdapter(this);//,dbHelperMain.getAllData());
-        recyclerView.setAdapter(mainActivityAdapter);
-        final Context mainActivitycontext = this;
-//        Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, mainActivitycontext);
-//        bgetall.execute("getAllData");
+//        dbHelperMain = new ProfileDBHelper(this);
+//        mainActivityAdapter = new ProfileAdapter(this);//,dbHelperMain.getAllData());
+//        recyclerView.setAdapter(mainActivityAdapter);
+        mainActivitycontext = this;
+        Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, mainActivitycontext);
+        bgetall.execute("getAllData");
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
@@ -91,10 +91,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-//hrishi -> getAllData
-//                Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, mainActivitycontext);
-//                bgetall.execute("getAllData");
-                mainActivityAdapter.swapCursor(dbHelperMain.getAllData());
+                //hrishi -> getAllData
+                Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, mainActivitycontext);
+                bgetall.execute("getAllData");
+//                mainActivityAdapter.swapCursor(dbHelperMain.getAllData());
 
                 if (direction == ItemTouchHelper.RIGHT) {
                     Background_Sqlite_Read_Task backgroundSqliteReadTask = new Background_Sqlite_Read_Task(viewHolder.itemView.getTag().toString(),mainActivitycontext);
@@ -190,10 +190,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         //hrishi -> getAllData
-        mainActivityAdapter = new ProfileAdapter(this, dbHelperMain.getAllData());
-        recyclerView.setAdapter(mainActivityAdapter);
-//        Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, getBaseContext());
-//        bgetall.execute("getAllData");
+//        mainActivityAdapter = new ProfileAdapter(this, dbHelperMain.getAllData());
+//        recyclerView.setAdapter(mainActivityAdapter);
+        Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, getBaseContext());
+        bgetall.execute("getAllData");
     }
 
     @Override
@@ -248,8 +248,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static void updateRecyclerView() {
         //hrishi -> getAllData
-        mainActivityAdapter.swapCursor(dbHelperMain.getAllData());
-//        Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, getBaseContext());
-//        bgetall.execute("getAllData");
+//        mainActivityAdapter.swapCursor(dbHelperMain.getAllData());
+        Background_Sqlite_Read_Task bgetall = new Background_Sqlite_Read_Task(mainActivityAdapter,recyclerView, mainActivitycontext);
+        bgetall.execute("getAllData");
     }
 }
