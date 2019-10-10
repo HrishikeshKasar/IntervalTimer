@@ -12,7 +12,7 @@
         android:id="@+id/btn_ITCustom_Save"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
-        android:layout_height="71dp"
+        android:layout_height="60dp"
         android:layout_below="@id/LL_IntervalTimer3"
         android:layout_marginTop="21dp"
         android:background="?attr/buttoncolor"

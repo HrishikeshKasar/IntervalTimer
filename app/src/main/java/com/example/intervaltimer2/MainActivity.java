@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Interval Timer");
-        toolbar.setSubtitle("Home");
+        //toolbar.setSubtitle("Home");
         if(themeState == true) {
             toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
             toolbar.setSubtitleTextColor(ContextCompat.getColor(this, R.color.white));

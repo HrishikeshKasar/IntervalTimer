@@ -14,7 +14,7 @@
         android:layout_height="75dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="50dp"
-        android:background="?attr/foregroundcolor"
+        android:background="?attr/buttoncolor"
         android:gravity="center"
         android:text="@string/SummaryTitle"
         android:textColor="?attr/textcolor"
