@@ -19,7 +19,6 @@ public class IntervalTimer_SummaryPage extends AppCompatActivity {
     private int seconds;
     private String distance;
 
-    private TextView txtView_warmup_sessions;
     private TextView txtView_lowIntensity_sessions;
     private TextView txtView_highIntensity_sessions;
     private TextView txtView_warmup_time;
@@ -47,7 +46,6 @@ public class IntervalTimer_SummaryPage extends AppCompatActivity {
         NUM_OF_SETS = NUM_OF_SETS / 2;
         distance = getIntent().getStringExtra("Distance");
 
-        txtView_warmup_sessions = findViewById(R.id.textView_warmup_sessions);
         txtView_lowIntensity_sessions = findViewById(R.id.textView_lowIntensity_sessions);
         txtView_highIntensity_sessions = findViewById(R.id.textView_highIntensity_sessions);
         txtView_warmup_time = findViewById(R.id.textView_warmup_time);
@@ -57,7 +55,6 @@ public class IntervalTimer_SummaryPage extends AppCompatActivity {
 
 
         display_string = "Sessions = " + 1;
-        txtView_warmup_sessions.setText(display_string);
 
         display_string = "Sessions = " + NUM_OF_SETS;
         txtView_lowIntensity_sessions.setText(display_string);
