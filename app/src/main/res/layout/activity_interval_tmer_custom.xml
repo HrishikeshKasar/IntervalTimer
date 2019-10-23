@@ -46,20 +46,6 @@
         android:layout_below="@id/textView_sets"
         android:background="#00000000">
 
-        <Button
-            android:id="@+id/btn_sets_minus"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="35dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            android:background="?attr/backgroundcolor"
-            android:gravity="right|center_vertical"
-            android:text="-"
-            android:textColor="?attr/textcolor"
-            android:textColorHint="?attr/textcolor"
-            android:textSize="24sp" />
-
         <EditText
             android:id="@+id/editText_sets"
             android:layout_width="70dp"
@@ -75,20 +61,6 @@
             android:textColorHint="?attr/textcolor"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/btn_sets_plus"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="35dp"
-            android:layout_height="match_parent"
-            android:layout_alignEnd="@+id/LL_IntervalTimer1"
-            android:layout_weight="1"
-            android:background="#00DDDCDC"
-            android:gravity="left|center_vertical"
-            android:text="+"
-            android:textColor="?attr/textcolor"
-            android:textColorHint="?attr/textcolor"
-            android:textSize="24sp" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -96,19 +68,6 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/textView_warmup">
-
-        <Button
-            android:id="@+id/btn_warmup_minus"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="35dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00DDDCDC"
-            android:gravity="right|center_vertical"
-            android:text="-"
-            android:textColor="?attr/textcolor"
-            android:textColorHint="?attr/textcolor"
-            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/editText_warmup_mins"
@@ -154,19 +113,6 @@
             android:textColorHint="?attr/textcolor"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/btn_warmup_plus"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="35dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00DDDCDC"
-            android:gravity="left|center_vertical"
-            android:text="+"
-            android:textColor="?attr/textcolor"
-            android:textColorHint="?attr/textcolor"
-            android:textSize="24sp" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -175,19 +121,6 @@
         android:layout_height="40dp"
         android:layout_below="@+id/textView_HighIntensity"
         android:layout_marginTop="-1dp">
-
-        <Button
-            android:id="@+id/btn_highintensity_minus"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="35dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00DDDCDC"
-            android:gravity="right|center_vertical"
-            android:text="-"
-            android:textColor="?attr/textcolor"
-            android:textColorHint="?attr/textcolor"
-            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/editText_highintensity_mins"
@@ -233,19 +166,6 @@
             android:textColorHint="?attr/textcolor"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/btn_highintensity_plus"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="35dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00DDDCDC"
-            android:gravity="left|center_vertical"
-            android:text="+"
-            android:textColor="?attr/textcolor"
-            android:textColorHint="?attr/textcolor"
-            android:textSize="24sp" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -253,19 +173,6 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/textView_LowIntensity">
-
-        <Button
-            android:id="@+id/btn_lowintensity_minus"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="35dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00DDDCDC"
-            android:gravity="right|center_vertical"
-            android:text="-"
-            android:textColor="?attr/textcolor"
-            android:textColorHint="?attr/textcolor"
-            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/editText_lowtensity_mins"
@@ -307,19 +214,6 @@
             android:hint="00"
             android:inputType="numberDecimal"
             android:nextFocusDown="@+id/editText_highintensity_mins"
-            android:textColor="?attr/textcolor"
-            android:textColorHint="?attr/textcolor"
-            android:textSize="24sp" />
-
-        <Button
-            android:id="@+id/btn_lowintensity_plus"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="35dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#00DDDCDC"
-            android:gravity="left|center_vertical"
-            android:text="+"
             android:textColor="?attr/textcolor"
             android:textColorHint="?attr/textcolor"
             android:textSize="24sp" />
